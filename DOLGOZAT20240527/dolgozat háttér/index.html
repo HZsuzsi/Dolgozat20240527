@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Háttér</title>
+    <style>
+        #myDiv {
+            width: 957px;
+            height: 636px;
+            background-image: url('./kep1.jpg');
+            background-size: cover;
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv"></div>
+
+    <script>
+        
+        function changeBackground() {
+            var div = document.getElementById('myDiv');
+            var originalBackground = 'url("./kep1.jpg")'; 
+            var newBackground = 'url("./kep2.jpg")'; 
+            
+          
+            if (div.style.backgroundImage === originalBackground) {
+                div.style.backgroundImage = newBackground;
+                setTimeout(function() {
+                    div.style.backgroundImage = originalBackground;
+                }, 2000); 
+                } else {
+                div.style.backgroundImage = originalBackground;
+            }
+        }
+
+       
+        document.getElementById('myDiv').addEventListener('click', changeBackground);
+    </script>
+</body>
+</html>

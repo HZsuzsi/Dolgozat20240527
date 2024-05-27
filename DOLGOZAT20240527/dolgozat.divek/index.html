@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div-ek</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        
+        const divs = document.querySelectorAll("body > div");
+        
+        
+        if (divs.length >= 5) {
+            
+            divs[0].textContent = "Első";
+            
+            
+            divs[2].textContent = "Harmadik";
+            
+            
+            divs[divs.length - 1].textContent = "Utolsó";
+            
+            
+            for (let i = 1; i < divs.length - 1; i++) {
+                if (i !== 2) {
+                    divs[i].textContent = i + 1;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
